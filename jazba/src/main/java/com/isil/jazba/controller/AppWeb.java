@@ -1,5 +1,6 @@
 package com.isil.jazba.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.web.authentication.logout.SecurityContextLogoutHandler;
@@ -7,9 +8,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-import pe.isil.model.User;
-import pe.isil.service.SecurityService;
-import pe.isil.service.UserService;
+import com.isil.jazba.model.User;
+import com.isil.jazba.service.SecurityService;
+import com.isil.jazba.service.UserService;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -17,13 +18,10 @@ import javax.servlet.http.HttpServletResponse;
 @Controller
 public class AppWeb {
 
-    private final UserService userService;
-    private final SecurityService securityService;
-
-    public AppWeb(UserService userService, SecurityService securityService) {
-        this.userService = userService;
-        this.securityService = securityService;
-    }
+	@Autowired
+    private UserService userService;
+	@Autowired
+    private SecurityService securityService;
 
 
     @GetMapping(value = {"/login"})

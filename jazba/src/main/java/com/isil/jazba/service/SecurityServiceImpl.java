@@ -40,7 +40,7 @@ public class SecurityServiceImpl implements SecurityService {
 
         if(upat.isAuthenticated()){
             SecurityContextHolder.getContext().setAuthentication(upat);
-            log.debug("Auto login" + username + "is successfully!");
+            System.out.println("Auto login" + username + "is successfully!");
         }
     }
 }

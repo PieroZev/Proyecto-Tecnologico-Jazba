@@ -67,6 +67,11 @@ public class Usuario {
 		this.password = password;
 	}
 
+	public Usuario() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
 	public Long getDni() {
 		return dni;
 	}

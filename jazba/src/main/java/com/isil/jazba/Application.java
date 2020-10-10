@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import pe.isil.repository.RoleRepository;
+import com.isil.jazba.repository.RoleRepository;
 
 @SpringBootApplication
 public class Application implements CommandLineRunner {
@@ -13,7 +13,7 @@ public class Application implements CommandLineRunner {
     RoleRepository roleRepository;
 
     public static void main(String[] args) {
-        SpringApplication.run(pe.isil.Application.class, args);
+        SpringApplication.run(com.isil.jazba.Application.class, args);
     }
 
     @Override

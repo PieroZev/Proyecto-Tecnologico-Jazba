@@ -7,9 +7,9 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import pe.isil.model.Role;
-import pe.isil.model.User;
-import pe.isil.repository.UserRepository;
+import com.isil.jazba.model.Role;
+import com.isil.jazba.model.User;
+import com.isil.jazba.repository.UserRepository;
 
 import java.util.HashSet;
 import java.util.Set;

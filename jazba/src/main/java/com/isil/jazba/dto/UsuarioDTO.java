@@ -43,6 +43,11 @@ public class UsuarioDTO {
 		this.password = password;
 	}
 
+	public UsuarioDTO() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
 	public Long getDni() {
 		return dni;
 	}

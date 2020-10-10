@@ -1,6 +1,6 @@
 package com.isil.jazba.service;
 
-import pe.isil.model.User;
+import com.isil.jazba.model.User;
 
 public interface UserService {
 
