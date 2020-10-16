@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2020-10-09T19:35:52-0500",
+    date = "2020-10-15T17:02:17-0500",
     comments = "version: 1.3.1.Final, compiler: Eclipse JDT (IDE) 3.19.0.v20190903-0936, environment: Java 1.8.0_251 (Oracle Corporation)"
 )
 @Component
@@ -21,10 +21,10 @@ public class RepoProjectMapperImpl implements RepoProjectMapper {
 
         RepoProjectDTO repoProjectDTO = new RepoProjectDTO();
 
-        repoProjectDTO.setDescripcion( entity.getDescripcion() );
-        repoProjectDTO.setFilename( entity.getFilename() );
         repoProjectDTO.setIdRepositorio( entity.getIdRepositorio() );
+        repoProjectDTO.setFilename( entity.getFilename() );
         repoProjectDTO.setUploadRepo( entity.getUploadRepo() );
+        repoProjectDTO.setDescripcion( entity.getDescripcion() );
 
         return repoProjectDTO;
     }
@@ -37,10 +37,10 @@ public class RepoProjectMapperImpl implements RepoProjectMapper {
 
         RepoProject repoProject = new RepoProject();
 
-        repoProject.setDescripcion( entity.getDescripcion() );
-        repoProject.setFilename( entity.getFilename() );
         repoProject.setIdRepositorio( entity.getIdRepositorio() );
+        repoProject.setFilename( entity.getFilename() );
         repoProject.setUploadRepo( entity.getUploadRepo() );
+        repoProject.setDescripcion( entity.getDescripcion() );
 
         return repoProject;
     }

@@ -34,32 +34,21 @@ public class Usuario {
 	@Column
 	private int celular;
 	
-	@ManyToOne(fetch = FetchType.EAGER)
-	@JoinColumn(name = "idInstitucion", nullable = false)
-	private int idInstitucion;
-	
-	@ManyToOne(fetch = FetchType.EAGER)
-	@JoinColumn(name = "idTipo", nullable = false)
-	private int idTipo;
-	
-	@ManyToOne(fetch = FetchType.EAGER)
-	@JoinColumn(name = "idEspecialidad", nullable = false)
-	private int idEspecialidad;
-
-	public Usuario(Long dni, String nombre, String apePaterno, String apeMaterno, String correo, String password,
-			int celular, int idInstitucion, int idTipo, int idEspecialidad) {
-		super();
-		this.dni = dni;
-		this.nombre = nombre;
-		this.apePaterno = apePaterno;
-		this.apeMaterno = apeMaterno;
-		this.correo = correo;
-		this.password = password;
-		this.celular = celular;
-		this.idInstitucion = idInstitucion;
-		this.idTipo = idTipo;
-		this.idEspecialidad = idEspecialidad;
-	}
+	/*
+	 * @ManyToOne(fetch = FetchType.EAGER)
+	 * 
+	 * @JoinColumn(name = "idInstitucion", nullable = false) private int
+	 * idInstitucion;
+	 * 
+	 * @ManyToOne(fetch = FetchType.EAGER)
+	 * 
+	 * @JoinColumn(name = "idTipo", nullable = false) private int idTipo;
+	 * 
+	 * @ManyToOne(fetch = FetchType.EAGER)
+	 * 
+	 * @JoinColumn(name = "idEspecialidad", nullable = false) private int
+	 * idEspecialidad;
+	 */
 
 	public Usuario(String correo, String password) {
 		super();
@@ -128,28 +117,20 @@ public class Usuario {
 		this.celular = celular;
 	}
 
-	public int getIdInstitucion() {
-		return idInstitucion;
-	}
-
-	public void setIdInstitucion(int idInstitucion) {
-		this.idInstitucion = idInstitucion;
-	}
-
-	public int getIdTipo() {
-		return idTipo;
-	}
-
-	public void setIdTipo(int idTipo) {
-		this.idTipo = idTipo;
-	}
-
-	public int getIdEspecialidad() {
-		return idEspecialidad;
-	}
-
-	public void setIdEspecialidad(int idEspecialidad) {
-		this.idEspecialidad = idEspecialidad;
-	}
+	/*
+	 * public int getIdInstitucion() { return idInstitucion; }
+	 * 
+	 * public void setIdInstitucion(int idInstitucion) { this.idInstitucion =
+	 * idInstitucion; }
+	 * 
+	 * public int getIdTipo() { return idTipo; }
+	 * 
+	 * public void setIdTipo(int idTipo) { this.idTipo = idTipo; }
+	 * 
+	 * public int getIdEspecialidad() { return idEspecialidad; }
+	 * 
+	 * public void setIdEspecialidad(int idEspecialidad) { this.idEspecialidad =
+	 * idEspecialidad; }
+	 */
 	
 }

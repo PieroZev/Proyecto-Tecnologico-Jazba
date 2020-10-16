@@ -6,6 +6,7 @@ import java.util.NoSuchElementException;
 import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.isil.jazba.dto.RepoProjectDTO;
 import com.isil.jazba.dto.RepoProjectDetailsDTO;
@@ -14,6 +15,7 @@ import com.isil.jazba.mapper.RepoProjectMapper;
 import com.isil.jazba.repository.RepoProjectDetailsRepository;
 import com.isil.jazba.repository.RepoProjectRepository;
 
+@Service
 public class RepoProjectDetailsServiceImpl implements RepoProjectDetailsService {
 	
 	@Autowired

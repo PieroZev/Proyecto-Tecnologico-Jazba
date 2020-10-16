@@ -10,5 +10,4 @@ import com.isil.jazba.model.RepoProject;
 @Repository
 public interface RepoProjectRepository extends JpaRepository<RepoProject, Long>{
 
-	List<RepoProject> findAllByOrderByFilenameAsc();
 }

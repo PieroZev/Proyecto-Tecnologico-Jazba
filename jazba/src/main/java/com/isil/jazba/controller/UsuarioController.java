@@ -31,9 +31,9 @@ public class UsuarioController {
         return ResponseEntity.ok(usuarioService.listAll());
     }
 
-    @GetMapping("/{id}")
-    public ResponseEntity<UsuarioDTO> getById(@PathVariable Long id) {
-        return ResponseEntity.ok(usuarioService.getById(id));
+    @GetMapping("/{correo}")
+    public ResponseEntity<List<UsuarioDTO>> getByCorreo(@PathVariable String correo) {
+        return ResponseEntity.ok(usuarioService.getByCorreo(correo));
     }
 
     @PostMapping(value = "")

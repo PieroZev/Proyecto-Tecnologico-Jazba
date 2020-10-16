@@ -20,9 +20,9 @@ public class RepoProjectDetails {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long idDetalles;
 	
-	@ManyToOne(fetch = FetchType.EAGER)
-	@JoinColumn(name = "idRepositorio", nullable = false)
-	private int idRepositorio;
+	//@ManyToOne(fetch = FetchType.EAGER)
+	//@JoinColumn(name = "idRepositorio", nullable = false)
+	//private Long idRepositorio;
 	
 	@Column(nullable=false)
 	private String comentario;

@@ -5,11 +5,13 @@ import java.util.NoSuchElementException;
 import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.isil.jazba.dto.UsuarioDTO;
 import com.isil.jazba.mapper.UsuarioMapper;
 import com.isil.jazba.repository.UsuarioRepository;
 
+@Service
 public class UsuarioServiceImpl implements UsuarioService {
 
 	@Autowired
@@ -18,7 +20,7 @@ public class UsuarioServiceImpl implements UsuarioService {
     private UsuarioMapper usuarioMapper;
 	
 	public List<UsuarioDTO> listAll() {
-		return usuarioRepository.findAllByOrderByNombreAsc().stream()
+		return usuarioRepository.findAll().stream()
                 .map(usuarioMapper::toDTO)
                 .collect(Collectors.toList());
 	}
@@ -27,6 +29,12 @@ public class UsuarioServiceImpl implements UsuarioService {
 	        return usuarioRepository.findById(id).map(usuarioMapper::toDTO)
 	                .orElseThrow(() -> new NoSuchElementException(id+""));
 	}
+	
+	public List<UsuarioDTO> getByCorreo(String correo) {
+        return usuarioRepository.findByCorreo(correo).stream()
+        		.map(usuarioMapper::toDTO)
+        		.collect(Collectors.toList());
+}
 
 	public UsuarioDTO save(UsuarioDTO usuario) {
 		 boolean exists = usuario.getDni() != null && usuarioRepository.existsById(usuario.getDni());
