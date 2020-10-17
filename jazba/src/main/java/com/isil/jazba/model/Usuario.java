@@ -1,5 +1,7 @@
 package com.isil.jazba.model;
 
+import java.sql.Blob;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -20,10 +22,10 @@ public class Usuario {
 	private String nombre;
 	
 	@Column(nullable=false)
-	private String apePaterno;
+	private String apePat;
 	
 	@Column(nullable=false)
-	private String apeMaterno;
+	private String apeMat;
 	
 	@Column(nullable=false)
 	private String correo;
@@ -34,21 +36,18 @@ public class Usuario {
 	@Column
 	private int celular;
 	
-	/*
-	 * @ManyToOne(fetch = FetchType.EAGER)
-	 * 
-	 * @JoinColumn(name = "idInstitucion", nullable = false) private int
-	 * idInstitucion;
-	 * 
-	 * @ManyToOne(fetch = FetchType.EAGER)
-	 * 
-	 * @JoinColumn(name = "idTipo", nullable = false) private int idTipo;
-	 * 
-	 * @ManyToOne(fetch = FetchType.EAGER)
-	 * 
-	 * @JoinColumn(name = "idEspecialidad", nullable = false) private int
-	 * idEspecialidad;
-	 */
+	@Column
+	private Blob fileComprobante;
+	
+	@Column
+	private Long idInstitucion;
+	
+	@Column
+	private Long idTipo;
+	  
+	@Column 
+	  private Long idEspecialidad;
+	 
 
 	public Usuario(String correo, String password) {
 		super();
@@ -59,6 +58,21 @@ public class Usuario {
 	public Usuario() {
 		super();
 		// TODO Auto-generated constructor stub
+	}
+
+	public Usuario(Long dni, String nombre, String apePaterno, String apeMaterno, String correo, String password,
+			int celular, Long idInstitucion, Long idTipo, Long idEspecialidad) {
+		super();
+		this.dni = dni;
+		this.nombre = nombre;
+		this.apePat = apePaterno;
+		this.apeMat = apeMaterno;
+		this.correo = correo;
+		this.password = password;
+		this.celular = celular;
+		this.idInstitucion = idInstitucion;
+		this.idTipo = idTipo;
+		this.idEspecialidad = idEspecialidad;
 	}
 
 	public Long getDni() {
@@ -78,19 +92,19 @@ public class Usuario {
 	}
 
 	public String getApePaterno() {
-		return apePaterno;
+		return apePat;
 	}
 
 	public void setApePaterno(String apePaterno) {
-		this.apePaterno = apePaterno;
+		this.apePat = apePaterno;
 	}
 
 	public String getApeMaterno() {
-		return apeMaterno;
+		return apeMat;
 	}
 
 	public void setApeMaterno(String apeMaterno) {
-		this.apeMaterno = apeMaterno;
+		this.apeMat = apeMaterno;
 	}
 
 	public String getCorreo() {
@@ -117,20 +131,20 @@ public class Usuario {
 		this.celular = celular;
 	}
 
-	/*
-	 * public int getIdInstitucion() { return idInstitucion; }
-	 * 
-	 * public void setIdInstitucion(int idInstitucion) { this.idInstitucion =
-	 * idInstitucion; }
-	 * 
-	 * public int getIdTipo() { return idTipo; }
-	 * 
-	 * public void setIdTipo(int idTipo) { this.idTipo = idTipo; }
-	 * 
-	 * public int getIdEspecialidad() { return idEspecialidad; }
-	 * 
-	 * public void setIdEspecialidad(int idEspecialidad) { this.idEspecialidad =
-	 * idEspecialidad; }
-	 */
+	
+	  public Long getIdInstitucion() { return idInstitucion; }
+	  
+	  public void setIdInstitucion(Long idInstitucion) { this.idInstitucion =
+	  idInstitucion; }
+	  
+	  public Long getIdTipo() { return idTipo; }
+	  
+	  public void setIdTipo(Long idTipo) { this.idTipo = idTipo; }
+	  
+	  public Long getIdEspecialidad() { return idEspecialidad; }
+	  
+	  public void setIdEspecialidad(Long idEspecialidad) { this.idEspecialidad =
+	  idEspecialidad; }
+	 
 	
 }
