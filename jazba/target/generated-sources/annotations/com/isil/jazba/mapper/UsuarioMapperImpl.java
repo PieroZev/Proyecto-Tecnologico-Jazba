@@ -7,8 +7,8 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2020-10-16T16:33:35-0500",
-    comments = "version: 1.3.1.Final, compiler: Eclipse JDT (IDE) 3.19.0.v20190903-0936, environment: Java 1.8.0_251 (Oracle Corporation)"
+    date = "2020-10-16T20:30:27-0500",
+    comments = "version: 1.3.1.Final, compiler: javac, environment: Java 11.0.1 (Oracle Corporation)"
 )
 @Component
 public class UsuarioMapperImpl implements UsuarioMapper {
@@ -21,22 +21,22 @@ public class UsuarioMapperImpl implements UsuarioMapper {
 
         UsuarioDTO usuarioDTO = new UsuarioDTO();
 
-        usuarioDTO.setApeMaterno( entity.getApeMaterno() );
-        usuarioDTO.setApePaterno( entity.getApePaterno() );
-        usuarioDTO.setCelular( entity.getCelular() );
-        usuarioDTO.setCorreo( entity.getCorreo() );
         usuarioDTO.setDni( entity.getDni() );
-        if ( entity.getIdEspecialidad() != null ) {
-            usuarioDTO.setIdEspecialidad( entity.getIdEspecialidad().intValue() );
-        }
+        usuarioDTO.setNombre( entity.getNombre() );
+        usuarioDTO.setApePaterno( entity.getApePaterno() );
+        usuarioDTO.setApeMaterno( entity.getApeMaterno() );
+        usuarioDTO.setCorreo( entity.getCorreo() );
+        usuarioDTO.setPassword( entity.getPassword() );
+        usuarioDTO.setCelular( entity.getCelular() );
         if ( entity.getIdInstitucion() != null ) {
             usuarioDTO.setIdInstitucion( entity.getIdInstitucion().intValue() );
         }
         if ( entity.getIdTipo() != null ) {
             usuarioDTO.setIdTipo( entity.getIdTipo().intValue() );
         }
-        usuarioDTO.setNombre( entity.getNombre() );
-        usuarioDTO.setPassword( entity.getPassword() );
+        if ( entity.getIdEspecialidad() != null ) {
+            usuarioDTO.setIdEspecialidad( entity.getIdEspecialidad().intValue() );
+        }
 
         return usuarioDTO;
     }
@@ -49,16 +49,16 @@ public class UsuarioMapperImpl implements UsuarioMapper {
 
         Usuario usuario = new Usuario();
 
-        usuario.setApeMaterno( entity.getApeMaterno() );
-        usuario.setApePaterno( entity.getApePaterno() );
-        usuario.setCelular( entity.getCelular() );
-        usuario.setCorreo( entity.getCorreo() );
         usuario.setDni( entity.getDni() );
-        usuario.setIdEspecialidad( (long) entity.getIdEspecialidad() );
+        usuario.setNombre( entity.getNombre() );
+        usuario.setApePaterno( entity.getApePaterno() );
+        usuario.setApeMaterno( entity.getApeMaterno() );
+        usuario.setCorreo( entity.getCorreo() );
+        usuario.setPassword( entity.getPassword() );
+        usuario.setCelular( entity.getCelular() );
         usuario.setIdInstitucion( (long) entity.getIdInstitucion() );
         usuario.setIdTipo( (long) entity.getIdTipo() );
-        usuario.setNombre( entity.getNombre() );
-        usuario.setPassword( entity.getPassword() );
+        usuario.setIdEspecialidad( (long) entity.getIdEspecialidad() );
 
         return usuario;
     }

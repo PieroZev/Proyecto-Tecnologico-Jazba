@@ -17,9 +17,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.isil.jazba.dto.RepoProjectDTO;
 import com.isil.jazba.service.RepoProjectService;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 @RestController
-@CrossOrigin
+@CrossOrigin(origins = "*", methods= {RequestMethod.GET,RequestMethod.POST})
 @RequestMapping("jazba/api/v1/repositorio")
 public class RepoProjectController {
 

@@ -7,8 +7,8 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2020-10-15T17:38:57-0500",
-    comments = "version: 1.3.1.Final, compiler: Eclipse JDT (IDE) 3.19.0.v20190903-0936, environment: Java 1.8.0_251 (Oracle Corporation)"
+    date = "2020-10-16T20:30:27-0500",
+    comments = "version: 1.3.1.Final, compiler: javac, environment: Java 11.0.1 (Oracle Corporation)"
 )
 @Component
 public class RepoProjectDetailsMapperImpl implements RepoProjectDetailsMapper {
@@ -21,9 +21,9 @@ public class RepoProjectDetailsMapperImpl implements RepoProjectDetailsMapper {
 
         RepoProjectDetailsDTO repoProjectDetailsDTO = new RepoProjectDetailsDTO();
 
+        repoProjectDetailsDTO.setIdDetalles( entity.getIdDetalles() );
         repoProjectDetailsDTO.setComentario( entity.getComentario() );
         repoProjectDetailsDTO.setFechahoraComentario( entity.getFechahoraComentario() );
-        repoProjectDetailsDTO.setIdDetalles( entity.getIdDetalles() );
         repoProjectDetailsDTO.setNumLikes( entity.getNumLikes() );
 
         return repoProjectDetailsDTO;
@@ -37,9 +37,9 @@ public class RepoProjectDetailsMapperImpl implements RepoProjectDetailsMapper {
 
         RepoProjectDetails repoProjectDetails = new RepoProjectDetails();
 
+        repoProjectDetails.setIdDetalles( entity.getIdDetalles() );
         repoProjectDetails.setComentario( entity.getComentario() );
         repoProjectDetails.setFechahoraComentario( entity.getFechahoraComentario() );
-        repoProjectDetails.setIdDetalles( entity.getIdDetalles() );
         repoProjectDetails.setNumLikes( entity.getNumLikes() );
 
         return repoProjectDetails;

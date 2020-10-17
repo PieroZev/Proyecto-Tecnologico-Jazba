@@ -14,18 +14,24 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.isil.jazba.dto.UsuarioDTO;
 import com.isil.jazba.service.UsuarioService;
 
 @RestController
-@CrossOrigin
-@RequestMapping("jazba/api/v1/usuarios")
+@CrossOrigin(origins = "*", methods= {RequestMethod.GET,RequestMethod.POST})
+@RequestMapping("/jazba/api/v1/usuarios")
 public class UsuarioController {
 
 	@Autowired
 	private UsuarioService usuarioService;
+    /*@GetMapping("/mensaje")
+    public String mensaje() {
 
+      return "hola desde spring rest";
+    }*/
+    
     @GetMapping("")
     public ResponseEntity<List<UsuarioDTO>> listAll() {
         return ResponseEntity.ok(usuarioService.listAll());

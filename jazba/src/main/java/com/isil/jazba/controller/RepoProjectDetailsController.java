@@ -21,9 +21,9 @@ import com.isil.jazba.service.RepoProjectDetailsService;
 
 @RestController
 @CrossOrigin
-@RequestMapping("jazba/api/v1/detallesRepositorio")
+//@RequestMapping("jazba/api/v1/detallesRepositorio")
 public class RepoProjectDetailsController {
-
+    /*
 	@Autowired
 	private RepoProjectDetailsService repoProjectDetailsService;
 
@@ -56,4 +56,6 @@ public class RepoProjectDetailsController {
         return new ResponseEntity<>(HttpStatus.OK);
     }
 	
+
+    */
 }

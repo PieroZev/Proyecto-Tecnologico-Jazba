@@ -15,10 +15,13 @@ import com.isil.jazba.mapper.RepoProjectMapper;
 import com.isil.jazba.model.RepoProjectDetails;
 import com.isil.jazba.repository.RepoProjectDetailsRepository;
 import com.isil.jazba.repository.RepoProjectRepository;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 @Service
+@CrossOrigin(origins = "*", methods= {RequestMethod.GET,RequestMethod.POST})
 public class RepoProjectServiceImpl implements RepoProjectService{
-
+    
 	@Autowired
 	private RepoProjectRepository repoProjectRepository;
 	@Autowired

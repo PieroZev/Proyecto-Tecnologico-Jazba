@@ -8,7 +8,7 @@ import com.isil.jazba.dto.RepoProjectDetailsDTO;
 
 public interface RepoProjectDetailsService {
 
-	List<RepoProjectDetailsDTO> listAll();
+	/*List<RepoProjectDetailsDTO> listAll();
 
 	RepoProjectDetailsDTO getById(Long id);
 
@@ -16,6 +16,6 @@ public interface RepoProjectDetailsService {
 
 	RepoProjectDetailsDTO update(RepoProjectDetailsDTO repoProjectDetails);
 
-	void delete(Long id);
+	void delete(Long id);*/
 	
 }

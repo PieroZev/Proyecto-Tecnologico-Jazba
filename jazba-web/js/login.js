@@ -19,31 +19,29 @@
 			password : $("#txtPassword").val()
 		};
 
-		let USERNAME="jazba_user";
-		let PASSWORD="123456";
+		let USERNAME="jbaza";
+		let PASSWORD="12345";
 
 		
 		$.ajax({
-		url:"localhost:8080/jazba/api/v1/usuarios/" + usuario.correo,
-		method:"GET",
-		headers: {
-			'Authorization': "Basic " + btoa(USERNAME + ":" + PASSWORD)
-		},
-		dataType:"json"
+		url:"http://localhost:8080/jazba/api/v1/usuarios/" + usuario.correo,
+		method:"GET"
 		
 	}).done(function(data){
-			
-		if(data != null){
+		//console.log(data);
+		if(data.length > 0){
 
 			$.each(data,function(index,value){
 			
 				if(usuario.correo === value.correo && usuario.password === value.password){
-
+				
 				usuario.dni = value.dni;
 				usuario.nombre = value.nombre;
 				usuario.apePaterno = value.apePaterno;
 				usuario.apeMaterno = value.apeMaterno;
 				usuario.celular = value.celular;
+				
+				sessionStorage.setItem("session_user",JSON.stringify(usuario));
 
 
 				//pasar los datos al perfil-usuario
@@ -63,6 +61,8 @@
 		}
 		
 			});
+
+			return false;
 	}
 	
 	
